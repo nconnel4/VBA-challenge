@@ -114,7 +114,7 @@ Sub aggregateLooper(book)
     gvValue = 0
     
     firstRow = 2
-    lastRow = book.Cells(book.Rows.Count, "A").End(xlUp).Row
+    lastRow = book.Cells(book.Rows.Count, "I").End(xlUp).Row
     
     For Row = firstRow To lastRow
         
@@ -128,9 +128,9 @@ Sub aggregateLooper(book)
             gdValue = book.Range("K" & Row).Value
         End If
         
-        If book.Range("K" & Row) > gvValue Then
+        If book.Range("L" & Row) > gvValue Then
             gvTicker = book.Range("I" & Row).Value
-            gvValue = book.Range("K" & Row).Value
+            gvValue = book.Range("L" & Row).Value
         End If
         
     Next Row
